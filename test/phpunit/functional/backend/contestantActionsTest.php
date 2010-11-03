@@ -1,12 +1,10 @@
 <?php
 require_once dirname(__FILE__).'/../../bootstrap/functional.php';
 /**
- * A very simple test case for demonstrating functional testing.
- *
- * usage:
- * phpunit test/phpunit/functional/frontend/contestantActionsTest.php
+ * This small functional tests demonstrates that several applications could be handled
+ * with PHPUnit. Compare this test to the one in the frontend folder.
  */
-class functional_frontend_contestantActionsTest extends sfPHPUnitBaseFunctionalTestCase
+class functional_backend_contestantActionsTest extends sfPHPUnitBaseFunctionalTestCase
 {
   protected function _start()
   {
@@ -16,7 +14,7 @@ class functional_frontend_contestantActionsTest extends sfPHPUnitBaseFunctionalT
 
   protected function getApplication()
   {
-    return 'frontend';
+    return 'backend';
   }
 
   public function testDefault()
@@ -24,7 +22,7 @@ class functional_frontend_contestantActionsTest extends sfPHPUnitBaseFunctionalT
     $browser = $this->getBrowser();
 
     $browser->
-      get('/contestants')->
+      get('/contestant/index')->
 
       with('request')->begin()->
         isParameter('module', 'contestant')->
@@ -33,8 +31,7 @@ class functional_frontend_contestantActionsTest extends sfPHPUnitBaseFunctionalT
 
       with('response')->begin()->
         isStatusCode(200)->
-        checkElement('body', '/Contestants/')->
-        checkElement('body', '/app:frontend/')->
+        checkElement('body', '/app:backend/')->
       end()
     ;
   }

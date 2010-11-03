@@ -1,0 +1,1 @@
+app:<?php echo sfConfig::get('sf_app'); ?>

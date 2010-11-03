@@ -1,0 +1,37 @@
+README
+======
+
+This symfony sandbox should demonstrate the usage and handling of the sfPHPUnit2Plugin.
+More to come soon ...
+
+
+
+Steps:
+-----------------
+
+# generate and call some unit tests
+./symfony phpunit:generate-unit Sprinter
+./symfony phpunit:generate-configuration
+phpunit test/phpunit/unit/SprinterTest.php
+
+./symfony phpunit:generate-unit Race
+phpunit test/phpunit/unit/RaceTest.php
+
+./symfony phpunit:generate-unit --dir=model ContestantTable
+phpunit test/phpunit/unit/model/ContestantTableTest.php
+
+# run all unit tests
+phpunit test/phpunit/unit
+
+# geneated and called some functional tests
+./symfony phpunit:generate-functional frontend contestant
+./symfony phpunit:generate-functional backend contestant
+
+# run all functional tests
+phpunit test/phpunit/functional
+
+# test everything
+phpunit test/phpunit
+
+# should return
+# OK (5 tests, 213 assertions)
