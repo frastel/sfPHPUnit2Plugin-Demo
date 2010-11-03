@@ -1,0 +1,6 @@
+Contestant:
+  actAs:
+    Timestampable: ~
+  columns:
+    name:          { type: string(255), notnull: true, unique: true }
+    speed_factor:  { type: string(20), notnull: true }

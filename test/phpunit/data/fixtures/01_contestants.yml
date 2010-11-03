@@ -1,0 +1,13 @@
+Contestant:
+  c_slow:
+    name: slowman
+    speed_factor: slow
+  c_medium:
+    name: mediumman
+    speed_factor: medium
+  c_fast:
+    name: fastman
+    speed_factor: fast
+  c_speedy:
+    name: speedy gonzales
+    speed_factor: fast

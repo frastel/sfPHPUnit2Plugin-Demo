@@ -1,0 +1,7 @@
+all:
+  doctrine:
+    class: sfDoctrineDatabase
+    param:
+      dsn: 'sqlite:/tmp/sfphpunit2plugin_data_demo.db'
+      username: root
+      password: null
